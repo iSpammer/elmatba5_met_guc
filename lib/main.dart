@@ -1,7 +1,11 @@
-import './category_grid.dart';
+import 'package:elmatba5/settings_screen.dart';
+import 'package:elmatba5/tab_screen.dart';
 import 'package:flutter/material.dart';
+
+import './category_grid.dart';
 import './kitchen_screen.dart';
-import './recepie_screen.dart';
+import './recipe_screen.dart';
+import 'fav_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,12 +21,13 @@ class MyApp extends StatelessWidget {
       ),
       // home: CategoryGrid(),
       initialRoute: '/',
+        routes: {
+          '/': (dummCtx) => TabsControllerScreen(),
+          '/kitchenRoute': (dummyCtx)=> KitchenScreen(),
+          '/settingsRoute': (dummyCtx)=> SettingsScreen(),
+          '/recipeRoute': (dummyCtx) => RecipeScreen(),
 
-      routes: {
-        '/': (dummyCtx) => CategoryGrid(),
-        '/kitchenRoute': (dummyCtx) => KitchenScreen(),
-        '/recepieRoute': (dummyCtx) => RecepieScreen(),
-      },
+        }
     );
   }
 }

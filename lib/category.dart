@@ -1,6 +1,7 @@
 class Category {
-  String id;
-  String title;
-  String image;
+  final String id;
+  final String title;
+  final String image;
+
   Category({required this.id, required this.title, required this.image});
 }
